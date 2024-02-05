@@ -10,7 +10,7 @@ import EmailSection from "./components/EmailSection";
 import Footer from "./components/Footer";
 const App = () => {
   return (
-    <main className="flex min-h-screen flex-col bg-[#121212] px-16">
+    <main className="flex min-h-screen flex-col bg-[#121212]">
       <Navbar />
       <div className="container mt-24 mx-auto px-12 py-4">
         <HeroSection />
