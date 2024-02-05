@@ -6,56 +6,65 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
+    title: "Movie-App",
+    description: "Search Movies or Tv Shows and watch trailor",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Sameerkhan344/MovieApp",
+    previewUrl: "https://movie-app-blue-pi.vercel.app",
+    Tech: "#React.js, TailwindCss, API",
   },
   {
     id: 2,
-
+    title: "TODO-APP CURD",
+    description:
+      "Create your list with this todo App and manage it. with the help of drag and drop",
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Sameerkhan344/TODO-LIST-APP",
+    previewUrl: "https://todo-list-app-kohl-nine.vercel.a",
+    Tech: "#React.js, TailwindCss,",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
+    title: "Weather-App",
+    description:
+      "In this app we can check real time weather of any city or country.",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Sameerkhan344/Weather_App_React",
+    previewUrl: "https://weather-app-react-ten-lyart.vercel.app/",
+    Tech: "#React.js, TailwindCss, API",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
+    title: "NIEX-Website UI Develop",
+    description: "This is a user interface website ",
     image: "/images/projects/4.png",
-    tag: ["All", "Figma"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Sameerkhan344/NIFA-website",
+    previewUrl: "https://nifa-website.vercel.app/",
+    Tech: "#React.js, TailwindCss,",
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
+    title: "RAWG Game App",
+    description: "This is a game application",
     image: "/images/projects/6.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Sameerkhan344/RAWG-game-Web-App",
+    previewUrl: "https://rawg-game-web-app-s9b8.vercel.app/",
+    Tech: "#React.js, TailwindCss, API",
+  },
+  {
+    id: 6,
+    title: "Resort Website",
+    description: "This is a beautiful UI website with animation",
+    image: "/images/projects/5.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/Sameerkhan344/Resort-Client-project-freelance",
+    previewUrl: "https://resort-client-project-freelance.vercel.app/",
+    Tech: "Html, Css, JavScript, TailwindCss",
   },
 ];
 
@@ -118,6 +127,7 @@ const ProjectsSection = () => {
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              Tech={project.Tech}
             />
           </motion.li>
         ))}
