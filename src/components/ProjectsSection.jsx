@@ -22,7 +22,7 @@ const projectsData = [
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Sameerkhan344/TODO-LIST-APP",
-    previewUrl: "https://todo-list-app-kohl-nine.vercel.a",
+    previewUrl: "https://todo-list-app-kohl-nine.vercel.app",
     Tech: "#React.js, TailwindCss,",
   },
   {
