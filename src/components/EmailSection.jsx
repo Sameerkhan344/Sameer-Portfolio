@@ -1,41 +1,29 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import GithubIcon from "../../public/images/projects/github-icon.svg";
 import LinkedinIcon from "../../public/images/projects/linkedin-icon.svg";
-// import { styles } from "../styles";
-// import { Link } from "react-scroll";
+import emailjs from "@emailjs/browser";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const form = useRef();
 
-  const handleSubmit = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    const data = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
-    };
-    const JSONdata = JSON.stringify(data);
-    const endpoint = "/src/api/send";
 
-    // Form the request for sending data to the server.
-    const options = {
-      // The method is POST because we are sending data.
-      method: "POST",
-      // Tell the server we're sending JSON.
-      headers: {
-        "Content-Type": "application/json",
-      },
-      // Body of the request is the JSON data we created above.
-      body: JSONdata,
-    };
-
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
-
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
-    }
+    emailjs
+      .sendForm("service_g981cww", "template_tg8r1jw", form.current, {
+        publicKey: "P6F0RAYJdEOAj8_Fd",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+    e.target.reset();
+    setEmailSubmitted(true);
   };
 
   return (
@@ -70,7 +58,23 @@ const EmailSection = () => {
             Email sent successfully!
           </p>
         ) : (
-          <form className="flex flex-col" onSubmit={handleSubmit}>
+          <form ref={form} className="flex flex-col" onSubmit={sendEmail}>
+            <div className="mb-6">
+              <label
+                htmlFor="name"
+                className="text-white block mb-2 text-sm font-medium"
+              >
+                Your Name
+              </label>
+              <input
+                name="user_name"
+                type="name"
+                id="name"
+                required
+                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                placeholder="Your good name"
+              />
+            </div>
             <div className="mb-6">
               <label
                 htmlFor="email"
@@ -79,7 +83,7 @@ const EmailSection = () => {
                 Your email
               </label>
               <input
-                name="email"
+                name="user_email"
                 type="email"
                 id="email"
                 required
