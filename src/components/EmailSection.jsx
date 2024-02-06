@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import GithubIcon from "../../public/images/projects/github-icon.svg";
 import LinkedinIcon from "../../public/images/projects/linkedin-icon.svg";
-import { styles } from "../styles";
-import { Link } from "react-scroll";
+// import { styles } from "../styles";
+// import { Link } from "react-scroll";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -15,7 +15,7 @@ const EmailSection = () => {
       message: e.target.message.value,
     };
     const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";
+    const endpoint = "/src/api/send";
 
     // Form the request for sending data to the server.
     const options = {
@@ -56,12 +56,12 @@ const EmailSection = () => {
           try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="github.com">
+          <a href="https://github.com/Sameerkhan344">
             <img src={GithubIcon} alt="Github Icon" />
-          </Link>
-          <Link href="linkedin.com">
+          </a>
+          <a href="https://www.linkedin.com/in/sameer-khan-335097115/">
             <img src={LinkedinIcon} alt="Linkedin Icon" />
-          </Link>
+          </a>
         </div>
       </div>
       <div>
