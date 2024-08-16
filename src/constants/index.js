@@ -14,7 +14,7 @@ const experiences = [
   },
   {
     title: "React.js Developer",
-    company_name: "Annoce soultion (Bhopa)",
+    company_name: "Anncode Pro soultion (Bhopa)",
     // icon: starbucks,
     iconBg: "#383E56",
     date: "March-june 2024",
