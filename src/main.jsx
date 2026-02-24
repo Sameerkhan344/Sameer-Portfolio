@@ -7,7 +7,6 @@ import Lenis from "./components/Lenis.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Lenis>
-
     <App />
     </Lenis>
   </React.StrictMode>
