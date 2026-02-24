@@ -57,16 +57,26 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <img src="/images/projects/about-image.png" width={500} height={500} />
+        <img
+          src="https://camo.githubusercontent.com/2deac39daa0924a345790ce050107aa19c8c49dbc73aa6fce086b83bc95fe784/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f3638302f302a37513379765349765f7430696f4a2d5a2e676966"
+          width={500}
+          height={500}
+          alt="coding"
+        />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, HTML, CSS,
-            and Git. I am a quick learner and I am always looking to expand my
-            knowledge and skill set. I am a team player and I am excited to work
-            with others to create amazing applications.
+            About I’m a GSAP-focused Frontend Developer with 3+ years of
+            experience building animation-led, high-performance websites using
+            React.js and Next.js. At Zerror Studios, I’ve developed and
+            maintained the frontend for THR India, Esquire India, Robb Report
+            India, and Manifest — delivering interactive editorial platforms for
+            some of the country’s leading media powerhouses. My work spans
+            scroll-driven storytelling, motion systems, CMS integrations, and
+            performance optimization at scale. I’m now looking to collaborate
+            with design-forward agencies and studios where I can craft immersive
+            web experiences, push interaction quality, and ship visually
+            distinctive websites that stand out.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
